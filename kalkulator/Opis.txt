@@ -1,0 +1,28 @@
+Autor: Paweł Brodziak
+
+Kalkulator kredytowy konfiguruje się i wykonuje wszystkie akcje w pliku Kalkulator_main.py
+
+Parametry startowe kalkulatora:
+#       kwota kredytu
+#       ilość rat -podana jako ilość okresów spłaty -nie większa niż 35 lat
+#       okres spłat (możliwe raty tygodniowe, miesięczne (domyślnie), kwartalne i roczne)
+#       rodzaj rat (raty ze stałą kwotą łączną -raty stałe (domyślnie) lub ze stałą kwotą kapitałową -raty malejące
+#       rodzaj oprocentowania -stałe lub zmienne (domyślnie) -stałe używa wartości stopa_procentowa,
+#           zmienne pobiera obecną stopę referencyjną NBP -nie znalazłem API z WIBOR
+#       rodzaj kapitalizacji -kapitalizacja ciągła (domyślnie) lub okresowa
+#       okres kapitalizacji -okresy kapitalizacji, jeśli kapitalizacja okresowa jest używana
+#           (możliwa kapitalizacja dobowa, tygodniowa, miesięczna (domyślnie), kwartalna, półroczna i roczna)
+#
+#   Możliwe operacje na wygenerowanym harmonogramie
+#       wakacje kredytowe
+#           wakacje rządowe -odsetki nie są naliczane, kapitał do spłaty się nie zmienia
+#           wakacje bankowe -odsetki są doliczane do kapitału
+#       nadpłata kredytu
+#           nadpłata zmniejszająca przyszły raty kredytu
+#           nadpłata zmniejszająca okres trwania kredytu - zmniejsza liczbę rat do spłaty
+#       zmiana oprocentowania
+#           zmiana oprocentowania stałego - podanie nowego oprocentowania
+#           aktualizacja oprocentowania zmiennego - pobiera aktualną wartość stopy referencyjnej
+#       zmiana czasu kredytu -pozwala na zmianę ilości pozostałych do spłaty rat (wydłuża lub skraca kredyt)
+#       łączne odsetki -oblicza sumy wszystkich odsetek jakie trzeba będzie zapłacić w czasie trwania całego kredytu
+#       eksport harmonogramu -pozwala na zapisanie wygenerowanego harmonogramu w formacie Excel
